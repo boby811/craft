@@ -1,0 +1,44 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myCr_corpsLabel" translate="craftApp.cr_corps.home.createOrEditLabel">Create or edit a Cr_corps</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="cr_corps.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="craftApp.cr_corps.co_nom_fr_fr" for="field_co_nom_fr_fr">Co_nom_fr_fr</label>
+            <input type="text" class="form-control" name="co_nom_fr_fr" id="field_co_nom_fr_fr"
+                    ng-model="cr_corps.co_nom_fr_fr"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="craftApp.cr_corps.cr_type_corps" for="field_cr_type_corps">cr_type_corps</label>
+            <select class="form-control" id="field_cr_type_corps" name="cr_type_corps" ng-model="cr_corps.cr_type_corpsId" ng-options="cr_type_corps.id as cr_type_corps.tc_libelle_fr_fr for cr_type_corps in cr_type_corpss">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="craftApp.cr_corps.cr_systeme" for="field_cr_systeme">cr_systeme</label>
+            <select class="form-control" id="field_cr_systeme" name="cr_systeme" ng-model="cr_corps.cr_systemeId" ng-options="cr_systeme.id as cr_systeme.sy_nom_fr_fr for cr_systeme in cr_systemes">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

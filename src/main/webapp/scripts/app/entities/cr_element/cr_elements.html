@@ -1,0 +1,75 @@
+<div>
+    <h2 translate="craftApp.cr_element.home.title">Cr_elements</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="cr_element.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="craftApp.cr_element.home.createLabel">Create a new Cr_element</span>
+                </button>
+            </div>
+            <div class="col-md-8">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                    </div>
+                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a Cr_element</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="craftApp.cr_element.el_nom_court_fr_fr">El_nom_court_fr_fr</span></th>
+                    <th><span translate="craftApp.cr_element.el_nom_long_fr_fr">El_nom_long_fr_fr</span></th>
+                    <th><span translate="craftApp.cr_element.el_description_fr_fr">El_description_fr_fr</span></th>
+                    <th><span translate="craftApp.cr_element.el_num_atomique">El_num_atomique</span></th>
+                    <th><span translate="craftApp.cr_element.el_point_fusion">El_point_fusion</span></th>
+                    <th><span translate="craftApp.cr_element.cr_rarete">cr_rarete</span></th>
+                    <th><span translate="craftApp.cr_element.cr_image">cr_image</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cr_element in cr_elements track by cr_element.id">
+                    <td><a ui-sref="cr_element.detail({id:cr_element.id})">{{cr_element.id}}</a></td>
+                    <td>{{cr_element.el_nom_court_fr_fr}}</td>
+                    <td>{{cr_element.el_nom_long_fr_fr}}</td>
+                    <td>{{cr_element.el_description_fr_fr}}</td>
+                    <td>{{cr_element.el_num_atomique}}</td>
+                    <td>{{cr_element.el_point_fusion}}</td>
+                    <td>
+                        <a ui-sref="cr_rarete.detail({id:cr_element.cr_rareteId})">{{cr_element.cr_rareteRa_libelle_fr_fr}}</a>
+                    </td>
+                    <td>
+                        <span ng-repeat="cr_image in cr_element.cr_images">
+                            <a class="form-control-static" ui-sref="cr_image.detail({id: {{cr_image.id}}})">{{cr_image.im_url}}</a>{{$last ? '' : ', '}}
+                        <span>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="cr_element.detail({id:cr_element.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="cr_element.edit({id:cr_element.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="cr_element.delete({id:cr_element.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

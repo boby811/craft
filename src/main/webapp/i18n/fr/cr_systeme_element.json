@@ -1,0 +1,24 @@
+{
+    "craftApp": {
+        "cr_systeme_element" : {
+            "home": {
+                "title": "Cr_systeme_elements",
+                "createLabel": "Créer un nouveau Cr_systeme_element",
+                "createOrEditLabel": "Créer ou éditer un Cr_systeme_element"
+            },
+            "created": "Un nouveau Cr_systeme_element a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Cr_systeme_element avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Cr_systeme_element avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Cr_systeme_element {{ id }} ?"
+            },
+            "detail": {
+                "title": "Cr_systeme_element"
+            },
+            "se_quantite": "Se_quantite",
+            "cr_element": "Cr_element",
+            "cr_systeme": "Cr_systeme"
+        }
+    }
+}
+

@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span translate="craftApp.cr_puissance.detail.title">Cr_puissance</span> {{cr_puissance.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_puissance.pu_libelle">Pu_libelle</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{cr_puissance.pu_libelle}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

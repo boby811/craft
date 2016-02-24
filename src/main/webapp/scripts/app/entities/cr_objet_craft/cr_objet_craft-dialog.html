@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myCr_objet_craftLabel" translate="craftApp.cr_objet_craft.home.createOrEditLabel">Create or edit a Cr_objet_craft</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="cr_objet_craft.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="craftApp.cr_objet_craft.oc_quantite_element" for="field_oc_quantite_element">Oc_quantite_element</label>
+            <input type="number" class="form-control" name="oc_quantite_element" id="field_oc_quantite_element"
+                    ng-model="cr_objet_craft.oc_quantite_element"
+                    required />
+            <div ng-show="editForm.oc_quantite_element.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.oc_quantite_element.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.oc_quantite_element.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="craftApp.cr_objet_craft.cr_puissance" for="field_cr_puissance">cr_puissance</label>
+            <select class="form-control" id="field_cr_puissance" name="cr_puissance" ng-model="cr_objet_craft.cr_puissanceId" ng-options="cr_puissance.id as cr_puissance.pu_libelle for cr_puissance in cr_puissances">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="craftApp.cr_objet_craft.cr_categorie_craft" for="field_cr_categorie_craft">cr_categorie_craft</label>
+            <select class="form-control" id="field_cr_categorie_craft" name="cr_categorie_craft" ng-model="cr_objet_craft.cr_categorie_craftId" ng-options="cr_categorie_craft.id as cr_categorie_craft.cc_nom_long_fr_fr for cr_categorie_craft in cr_categorie_crafts">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="craftApp.cr_objet_craft.cr_element" for="field_cr_element">cr_element</label>
+            <select class="form-control" id="field_cr_element" name="cr_element" ng-model="cr_objet_craft.cr_elementId" ng-options="cr_element.id as cr_element.el_nom_long_fr_fr for cr_element in cr_elements">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

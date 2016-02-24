@@ -1,0 +1,29 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "cr_corps",
+            "otherEntityName": "cr_corps",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "co_nom_fr_fr"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "cr_element",
+            "otherEntityName": "cr_element",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "el_nom_long_fr_fr"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "ce_quantite",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151222085816",
+    "dto": "mapstruct",
+    "service": "no",
+    "pagination": "pager"
+}

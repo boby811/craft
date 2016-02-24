@@ -1,0 +1,23 @@
+{
+    "craftApp": {
+        "cr_puissance" : {
+            "home": {
+                "title": "Cr_puissances",
+                "createLabel": "Créer un nouveau Cr_puissance",
+                "createOrEditLabel": "Créer ou éditer un Cr_puissance"
+            },
+            "created": "Un nouveau Cr_puissance a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Cr_puissance avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Cr_puissance avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Cr_puissance {{ id }} ?"
+            },
+            "detail": {
+                "title": "Cr_puissance"
+            },
+            "pu_libelle": "Pu_libelle",
+            "cr_objet_craft": "Cr_objet_craft"
+        }
+    }
+}
+

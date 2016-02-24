@@ -1,0 +1,25 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "cr_element",
+            "otherEntityName": "cr_element",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "cr_rarete"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "ra_libelle_fr_fr",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151222083842",
+    "dto": "mapstruct",
+    "service": "no",
+    "pagination": "no"
+}

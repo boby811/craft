@@ -1,0 +1,31 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "cr_element",
+            "otherEntityName": "cr_element",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "cr_image"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "cr_categorie_craft",
+            "otherEntityName": "cr_categorie_craft",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "cr_image"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "im_url",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151222084232",
+    "dto": "mapstruct",
+    "service": "no",
+    "pagination": "no"
+}

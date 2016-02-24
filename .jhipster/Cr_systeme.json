@@ -1,0 +1,32 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "cr_systeme_element",
+            "otherEntityName": "cr_systeme_element",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "cr_systeme"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "cr_corps",
+            "otherEntityName": "cr_corps",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "cr_systeme"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "sy_nom_fr_fr",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151222085038",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pagination"
+}

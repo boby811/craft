@@ -1,0 +1,38 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "cr_image",
+            "otherEntityName": "cr_image",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "im_url",
+            "ownerSide": true
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "cr_objet_craft",
+            "otherEntityName": "cr_objet_craft",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "cr_categorie_craft"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "cc_nom_court_fr_fr",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "cc_nom_long_fr_fr",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151222093330",
+    "dto": "mapstruct",
+    "service": "no",
+    "pagination": "no"
+}

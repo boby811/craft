@@ -1,0 +1,24 @@
+{
+    "craftApp": {
+        "cr_categorie_craft" : {
+            "home": {
+                "title": "Cr_categorie_crafts",
+                "createLabel": "Create a new Cr_categorie_craft",
+                "createOrEditLabel": "Create or edit a Cr_categorie_craft"
+            },
+            "created": "A new Cr_categorie_craft is created with identifier {{ param }}",
+            "updated": "A Cr_categorie_craft is updated with identifier {{ param }}",
+            "deleted": "A Cr_categorie_craft is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cr_categorie_craft {{ id }}?"
+            },
+            "detail": {
+                "title": "Cr_categorie_craft"
+            },
+            "cc_nom_court_fr_fr": "Cc_nom_court_fr_fr",
+            "cc_nom_long_fr_fr": "Cc_nom_long_fr_fr",
+            "cr_image": "Cr_image",
+            "cr_objet_craft": "Cr_objet_craft"
+        }
+    }
+}

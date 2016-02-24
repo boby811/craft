@@ -1,0 +1,78 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myCr_elementLabel" translate="craftApp.cr_element.home.createOrEditLabel">Create or edit a Cr_element</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="cr_element.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="craftApp.cr_element.el_nom_court_fr_fr" for="field_el_nom_court_fr_fr">El_nom_court_fr_fr</label>
+            <input type="text" class="form-control" name="el_nom_court_fr_fr" id="field_el_nom_court_fr_fr"
+                    ng-model="cr_element.el_nom_court_fr_fr"
+                    required />
+            <div ng-show="editForm.el_nom_court_fr_fr.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.el_nom_court_fr_fr.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="craftApp.cr_element.el_nom_long_fr_fr" for="field_el_nom_long_fr_fr">El_nom_long_fr_fr</label>
+            <input type="text" class="form-control" name="el_nom_long_fr_fr" id="field_el_nom_long_fr_fr"
+                    ng-model="cr_element.el_nom_long_fr_fr"
+                    required />
+            <div ng-show="editForm.el_nom_long_fr_fr.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.el_nom_long_fr_fr.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="craftApp.cr_element.el_description_fr_fr" for="field_el_description_fr_fr">El_description_fr_fr</label>
+            <input type="text" class="form-control" name="el_description_fr_fr" id="field_el_description_fr_fr"
+                    ng-model="cr_element.el_description_fr_fr"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="craftApp.cr_element.el_num_atomique" for="field_el_num_atomique">El_num_atomique</label>
+            <input type="number" class="form-control" name="el_num_atomique" id="field_el_num_atomique"
+                    ng-model="cr_element.el_num_atomique"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="craftApp.cr_element.el_point_fusion" for="field_el_point_fusion">El_point_fusion</label>
+            <input type="number" class="form-control" name="el_point_fusion" id="field_el_point_fusion"
+                    ng-model="cr_element.el_point_fusion"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="craftApp.cr_element.cr_rarete" for="field_cr_rarete">cr_rarete</label>
+            <select class="form-control" id="field_cr_rarete" name="cr_rarete" ng-model="cr_element.cr_rareteId" ng-options="cr_rarete.id as cr_rarete.ra_libelle_fr_fr for cr_rarete in cr_raretes">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="craftApp.cr_element.cr_image" for="field_cr_image">cr_image</label>
+            <select class="form-control" id="field_cr_image" multiple name="cr_image" ng-model="cr_element.cr_images" ng-options="cr_image as cr_image.im_url for cr_image in cr_images track by cr_image.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

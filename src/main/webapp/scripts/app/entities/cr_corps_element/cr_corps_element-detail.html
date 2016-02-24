@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span translate="craftApp.cr_corps_element.detail.title">Cr_corps_element</span> {{cr_corps_element.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_corps_element.ce_quantite">Ce_quantite</span>
+                            <div>
+            <select id="field_cr_systeme" name="cr_systeme" ng-options="cr_systeme.id as cr_systeme.sy_nom_fr_fr for cr_systeme in cr_systemes">
+                <option value=""></option>
+            </select>
+        </div>    
+                </td>
+                <td>
+                    <span class="form-control-static">{{cr_corps_element.ce_quantite}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_corps_element.cr_corps">cr_corps</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="cr_corps.detail({id:cr_corps_element.cr_corpsId})">{{cr_corps_element.cr_corpsCo_nom_fr_fr}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_corps_element.cr_element">cr_element</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="cr_element.detail({id:cr_corps_element.cr_elementId})">{{cr_corps_element.cr_elementEl_nom_long_fr_fr}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

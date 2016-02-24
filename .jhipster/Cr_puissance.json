@@ -1,0 +1,25 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "cr_objet_craft",
+            "otherEntityName": "cr_objet_craft",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "cr_puissance"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "pu_libelle",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151222084411",
+    "dto": "mapstruct",
+    "service": "no",
+    "pagination": "no"
+}

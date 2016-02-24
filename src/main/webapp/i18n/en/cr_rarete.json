@@ -1,0 +1,22 @@
+{
+    "craftApp": {
+        "cr_rarete" : {
+            "home": {
+                "title": "Cr_raretes",
+                "createLabel": "Create a new Cr_rarete",
+                "createOrEditLabel": "Create or edit a Cr_rarete"
+            },
+            "created": "A new Cr_rarete is created with identifier {{ param }}",
+            "updated": "A Cr_rarete is updated with identifier {{ param }}",
+            "deleted": "A Cr_rarete is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cr_rarete {{ id }}?"
+            },
+            "detail": {
+                "title": "Cr_rarete"
+            },
+            "ra_libelle_fr_fr": "Ra_libelle_fr_fr",
+            "cr_element": "Cr_element"
+        }
+    }
+}

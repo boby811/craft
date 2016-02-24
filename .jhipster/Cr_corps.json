@@ -1,0 +1,36 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "cr_corps_element",
+            "otherEntityName": "cr_corps_element",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "cr_corps"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "cr_type_corps",
+            "otherEntityName": "cr_type_corps",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "tc_libelle_fr_fr"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "cr_systeme",
+            "otherEntityName": "cr_systeme",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "sy_nom_fr_fr"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "co_nom_fr_fr",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151222085611",
+    "dto": "mapstruct",
+    "service": "no",
+    "pagination": "no"
+}

@@ -1,0 +1,24 @@
+{
+    "craftApp": {
+        "cr_image" : {
+            "home": {
+                "title": "Cr_images",
+                "createLabel": "Créer un nouveau Cr_image",
+                "createOrEditLabel": "Créer ou éditer un Cr_image"
+            },
+            "created": "Un nouveau Cr_image a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Cr_image avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Cr_image avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Cr_image {{ id }} ?"
+            },
+            "detail": {
+                "title": "Cr_image"
+            },
+            "im_url": "Im_url",
+            "cr_element": "Cr_element",
+            "cr_categorie_craft": "Cr_categorie_craft"
+        }
+    }
+}
+

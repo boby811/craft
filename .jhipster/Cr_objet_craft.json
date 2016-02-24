@@ -1,0 +1,39 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "cr_puissance",
+            "otherEntityName": "cr_puissance",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "pu_libelle"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "cr_categorie_craft",
+            "otherEntityName": "cr_categorie_craft",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "cc_nom_long_fr_fr"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "cr_element",
+            "otherEntityName": "cr_element",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "el_nom_long_fr_fr"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "oc_quantite_element",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151222093702",
+    "dto": "mapstruct",
+    "service": "no",
+    "pagination": "no"
+}

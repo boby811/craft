@@ -1,0 +1,65 @@
+<div>
+    <h2 translate="craftApp.cr_corps.home.title">Cr_corpss</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="cr_corps.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="craftApp.cr_corps.home.createLabel">Create a new Cr_corps</span>
+                </button>
+            </div>
+            <div class="col-md-8">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                    </div>
+                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a Cr_corps</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="craftApp.cr_corps.co_nom_fr_fr">Co_nom_fr_fr</span></th>
+                    <th><span translate="craftApp.cr_corps.cr_type_corps">cr_type_corps</span></th>
+                    <th><span translate="craftApp.cr_corps.cr_systeme">cr_systeme</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cr_corps in cr_corpss track by cr_corps.id">
+                    <td><a ui-sref="cr_corps.detail({id:cr_corps.id})">{{cr_corps.id}}</a></td>
+                    <td>{{cr_corps.co_nom_fr_fr}}</td>
+                    <td>
+                        <a ui-sref="cr_type_corps.detail({id:cr_corps.cr_type_corpsId})">{{cr_corps.cr_type_corpsTc_libelle_fr_fr}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="cr_systeme.detail({id:cr_corps.cr_systemeId})">{{cr_corps.cr_systemeSy_nom_fr_fr}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="cr_corps.detail({id:cr_corps.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="cr_corps.edit({id:cr_corps.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="cr_corps.delete({id:cr_corps.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

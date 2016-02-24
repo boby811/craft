@@ -1,0 +1,20 @@
+craft-elasticsearch:
+  container_name: craft-elasticsearch
+  image: elasticsearch:1.7.3
+  # volumes:
+  #   - ~/volumes/jhipster/craft/elasticsearch/:/usr/share/elasticsearch/data/
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+craft-mysql:
+  container_name: craft-mysql
+  image: mysql:5.7.9
+  # volumes:
+  #   - ~/volumes/jhipster/craft/mysql/:/var/lib/mysql/
+  environment:
+    - MYSQL_USER=root
+    - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    - MYSQL_DATABASE=craft
+  ports:
+    - "3306:3306"
+  command: mysqld --lower_case_table_names=1

@@ -1,0 +1,23 @@
+{
+    "craftApp": {
+        "cr_type_corps" : {
+            "home": {
+                "title": "Cr_type_corpss",
+                "createLabel": "Créer un nouveau Cr_type_corps",
+                "createOrEditLabel": "Créer ou éditer un Cr_type_corps"
+            },
+            "created": "Un nouveau Cr_type_corps a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Cr_type_corps avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Cr_type_corps avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Cr_type_corps {{ id }} ?"
+            },
+            "detail": {
+                "title": "Cr_type_corps"
+            },
+            "tc_libelle_fr_fr": "Tc_libelle_fr_fr",
+            "cr_corps": "Cr_corps"
+        }
+    }
+}
+

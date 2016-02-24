@@ -1,0 +1,31 @@
+{
+    "craftApp": {
+        "cr_element" : {
+            "home": {
+                "title": "Cr_elements",
+                "createLabel": "Créer un nouveau Cr_element",
+                "createOrEditLabel": "Créer ou éditer un Cr_element"
+            },
+            "created": "Un nouveau Cr_element a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Cr_element avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Cr_element avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Cr_element {{ id }} ?"
+            },
+            "detail": {
+                "title": "Cr_element"
+            },
+            "el_nom_court_fr_fr": "El_nom_court_fr_fr",
+            "el_nom_long_fr_fr": "El_nom_long_fr_fr",
+            "el_description_fr_fr": "El_description_fr_fr",
+            "el_num_atomique": "El_num_atomique",
+            "el_point_fusion": "El_point_fusion",
+            "cr_rarete": "Cr_rarete",
+            "cr_image": "Cr_image",
+            "cr_corps_element": "Cr_corps_element",
+            "cr_objet_craft": "Cr_objet_craft",
+            "cr_systeme_element": "Cr_systeme_element"
+        }
+    }
+}
+

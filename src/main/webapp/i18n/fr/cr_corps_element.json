@@ -1,0 +1,24 @@
+{
+    "craftApp": {
+        "cr_corps_element" : {
+            "home": {
+                "title": "Cr_corps_elements",
+                "createLabel": "Créer un nouveau Cr_corps_element",
+                "createOrEditLabel": "Créer ou éditer un Cr_corps_element"
+            },
+            "created": "Un nouveau Cr_corps_element a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Cr_corps_element avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Cr_corps_element avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Cr_corps_element {{ id }} ?"
+            },
+            "detail": {
+                "title": "Cr_corps_element"
+            },
+            "ce_quantite": "Ce_quantite",
+            "cr_corps": "Cr_corps",
+            "cr_element": "Cr_element"
+        }
+    }
+}
+

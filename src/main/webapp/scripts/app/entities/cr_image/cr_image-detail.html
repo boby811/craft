@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span translate="craftApp.cr_image.detail.title">Cr_image</span> {{cr_image.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_image.im_url">Im_url</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{cr_image.im_url}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,24 @@
+{
+    "craftApp": {
+        "cr_corps" : {
+            "home": {
+                "title": "Cr_corpss",
+                "createLabel": "Create a new Cr_corps",
+                "createOrEditLabel": "Create or edit a Cr_corps"
+            },
+            "created": "A new Cr_corps is created with identifier {{ param }}",
+            "updated": "A Cr_corps is updated with identifier {{ param }}",
+            "deleted": "A Cr_corps is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cr_corps {{ id }}?"
+            },
+            "detail": {
+                "title": "Cr_corps"
+            },
+            "co_nom_fr_fr": "Co_nom_fr_fr",
+            "cr_corps_element": "Cr_corps_element",
+            "cr_type_corps": "Cr_type_corps",
+            "cr_systeme": "Cr_systeme"
+        }
+    }
+}

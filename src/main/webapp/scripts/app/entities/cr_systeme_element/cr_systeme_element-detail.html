@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="craftApp.cr_systeme_element.detail.title">Cr_systeme_element</span> {{cr_systeme_element.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_systeme_element.se_quantite">Se_quantite</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{cr_systeme_element.se_quantite}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_systeme_element.cr_element">cr_element</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="cr_element.detail({id:cr_systeme_element.cr_elementId})">{{cr_systeme_element.cr_elementEl_nom_long_fr_fr}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_systeme_element.cr_systeme">cr_systeme</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="cr_systeme.detail({id:cr_systeme_element.cr_systemeId})">{{cr_systeme_element.cr_systemeSy_nom_fr_fr}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

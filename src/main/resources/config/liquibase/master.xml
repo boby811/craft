@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222084016_added_entity_Cr_type_corps.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222085038_added_entity_Cr_systeme.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222083842_added_entity_Cr_rarete.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222084411_added_entity_Cr_puissance.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222085611_added_entity_Cr_corps.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222084232_added_entity_Cr_image.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222084805_added_entity_Cr_element.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222085340_added_entity_Cr_systeme_element.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222085816_added_entity_Cr_corps_element.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222093330_added_entity_Cr_categorie_craft.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151222093702_added_entity_Cr_objet_craft.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+</databaseChangeLog>

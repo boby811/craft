@@ -1,0 +1,80 @@
+
+<div>
+    <h2><span translate="craftApp.cr_element.detail.title">Cr_element</span> {{cr_element.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_element.el_nom_court_fr_fr">El_nom_court_fr_fr</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{cr_element.el_nom_court_fr_fr}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_element.el_nom_long_fr_fr">El_nom_long_fr_fr</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{cr_element.el_nom_long_fr_fr}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_element.el_description_fr_fr">El_description_fr_fr</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{cr_element.el_description_fr_fr}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_element.el_num_atomique">El_num_atomique</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{cr_element.el_num_atomique}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_element.el_point_fusion">El_point_fusion</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{cr_element.el_point_fusion}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_element.cr_rarete">cr_rarete</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="cr_rarete.detail({id:cr_element.cr_rareteId})">{{cr_element.cr_rareteRa_libelle_fr_fr}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="craftApp.cr_element.cr_image">cr_image</span>
+                </td>
+                <td>
+                    <span ng-repeat="cr_image in cr_element.cr_images">
+                        <a class="form-control-static" ui-sref="cr_image.detail({id: {{cr_image.id}}})">{{cr_image.im_url}}</a>{{$last ? '' : ', '}}
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
