@@ -5,7 +5,7 @@ angular.module('craftApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalpr
     // jhipster-needle-angularjs-add-module JHipster will add new module
     'ui.bootstrap', 'ui.router',  'infinite-scroll', 'angular-loading-bar'])
 
-    .run(function ($rootScope, $location, $window, $http, $state, $translate, Language, Auth, Principal, ENV, VERSION) {
+    .run(function ($rootScope, $location, $window, $http, $state, $translate, $timeout,Language, Auth, Principal, ENV, VERSION) {
         // update the window title using params in the following
         // precendence
         // 1. titleKey parameter
@@ -56,6 +56,11 @@ angular.module('craftApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalpr
             updateTitle(titleKey);
         });
         
+        $rootScope.$on('$viewContentLoaded', function() {
+            $timeout(function() {
+                componentHandler.upgradeAllRegistered();
+            });
+        });
         // if the current translation changes, update the window title
         $rootScope.$on('$translateChangeSuccess', function() { updateTitle(); });
 
@@ -120,7 +125,7 @@ angular.module('craftApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalpr
     // Initialize material design
     .config(function () {
         $.material.init();
-    })
+    })	
     // jhipster-needle-angularjs-add-config JHipster will add new application configuration
     .config(['$urlMatcherFactoryProvider', function($urlMatcherFactory) {
         $urlMatcherFactory.type('boolean', {
