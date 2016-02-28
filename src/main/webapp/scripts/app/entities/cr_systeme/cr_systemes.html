@@ -27,6 +27,8 @@ class="hidden-xs"                        translate="craftApp.cr_systeme.home.cre
     </div>
     <br/>
     <div class="table-responsive">
+ <!-- zone de saisie déclenchant l'autocomplétion -->
+<input type="text" data-ng-model="system" data-typeahead="cr_systeme.sy_nom_fr_fr for cr_systeme in cr_systemes | filter:$viewValue" />
         <table class="jh-table table table-striped">
             <thead>
                 <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">

@@ -3,6 +3,27 @@
 angular.module('craftApp')
     .controller('Cr_systemeController', function ($scope, $state, Cr_systeme, Cr_systemeSearch, ParseLinks) {
 
+        // mock des cartes dans lesquelles rechercher
+    	$scope.cardslist = [
+    		{ 'name' : 'Skylasher' },
+    		{ 'name' : 'Thrashing Mossdog' },
+    		{ 'name' : 'Zhur-Taa Druid' },
+    		{ 'name' : 'Feral Animist' },
+    		{ 'name' : 'Rubblebelt Maaka' },
+    		{ 'name' : 'Mending Touch' },
+    		{ 'name' : 'Weapon Surge' },
+    		{ 'name' : 'Woodlot Crawler' },
+    		{ 'name' : 'Phytoburst' },
+    		{ 'name' : 'Smelt-Ward Gatekeepers' },
+    		{ 'name' : 'Debt to the Deathless' },
+    		{ 'name' : 'Woodlot Crawler' },
+    		{ 'name' : 'Blaze Commando' },
+    		{ 'name' : 'Uncovered Clues' }
+    	];
+    	
+    	// saisie du nom de la carte
+    	$scope.system = null;	
+    	
         $scope.cr_systemes = [];
         $scope.predicate = 'id';
         $scope.reverse = true;

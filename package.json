@@ -8,11 +8,13 @@
     "src/main/webapp/bower_components"
   ],
   "dependencies": {
-    "angular-animate": "^1.4.9",
-    "angular-aria": "^1.4.9",
+    "angular": "^1.4.9",
+    "angular-animate": "^1.5.0",
+    "angular-aria": "^1.5.0",
     "angular-material": "^1.0.2",
-    "bower": "^1.6.3",
-    "ng-autocomplete": "^1.0.0"
+    "bower": "^1.7.7",
+    "ng-autocomplete": "^1.0.0",
+    "yo": "^1.7.0"
   },
   "devDependencies": {
     "grunt": "0.4.5",
