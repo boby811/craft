@@ -3,7 +3,7 @@
         "cr_corps_element" : {
             "home": {
                 "title": "Cr_corps_elements",
-                "createLabel": "Créer un nouveau Cr_corps_element",
+                "createLabel": "Référencer la découverte d'un élément dans un système",
                 "createOrEditLabel": "Créer ou éditer un Cr_corps_element"
             },
             "created": "Un nouveau Cr_corps_element a été créé avec l'identifiant {{ param }}",
@@ -17,7 +17,9 @@
             },
             "ce_quantite": "Ce_quantite",
             "cr_corps": "Cr_corps",
-            "cr_element": "Cr_element"
+            "cr_element": "Quel élément avez vous découvert?",
+            "cr_systeme": "Cr_systeme",
+            "searchSysteme" : "Dans quel système l'avez-vous trouvé? S'il n'est pas répertorié créez le :-)"
         }
     }
 }

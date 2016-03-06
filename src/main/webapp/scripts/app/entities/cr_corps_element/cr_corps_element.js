@@ -53,25 +53,20 @@ angular.module('craftApp')
                 data: {
                     authorities: ['ROLE_USER'],
                 },
-                onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
-                    $uibModal.open({
-                        templateUrl: 'scripts/app/entities/cr_corps_element/cr_corps_element-dialog.html',
-                        controller: 'Cr_corps_elementDialogController',
-                        size: 'lg',
-                        resolve: {
-                            entity: function () {
-                                return {
-                                    ce_quantite: null,
-                                    id: null
-                                };
-                            }
-                        }
-                    }).result.then(function(result) {
-                        $state.go('cr_corps_element', null, { reload: true });
-                    }, function() {
-                        $state.go('cr_corps_element');
-                    })
-                }]
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/entities/cr_corps_element/cr_corps_element-detail.html',
+                        controller: 'Cr_corps_elementDetailController'
+                    }
+                },      
+                resolve: {
+                    entity: function () {
+                        return {
+                            ce_quantite: null,
+                            id: null
+                        };
+                    }
+                }
             })
             .state('cr_corps_element.edit', {
                 parent: 'cr_corps_element',

@@ -1,4 +1,49 @@
 
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="table-responsive">
+        <h4 class="modal-title" id="myCr_corps_elementLabel" translate="craftApp.cr_corps_element.home.createLabel">Create or edit a Cr_corps_element</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label translate="craftApp.cr_corps_element.cr_element" for="field_cr_element">cr_element</label>
+            <select class="form-control" id="field_cr_element" name="cr_element" ng-model="cr_corps_element.cr_elementId" ng-options="cr_element.id as cr_element.el_nom_long_fr_fr for cr_element in cr_elements">
+                <option value=""></option>
+            </select>
+        </div>      
+        <div class="form-group label-floating is-empty">
+        	<label class="control-label" translate="craftApp.cr_corps_element.searchSysteme" for="field_cr_systeme">cr_systeme</label>
+			<input type="text" id="field_cr_systeme" class="form-control" data-ng-model="system" data-typeahead="cr_systeme.id as cr_systeme.sy_nom_fr_fr for cr_systeme in cr_systemes | filter:$viewValue  | limitTo:8" typeahead-on-select="systemeSelection()" />
+        </div>     
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="sample3">
+    <label class="mdl-textfield__label" for="sample3">Text...</label>
+  </div>
+        <div class="form-group">
+            <label translate="craftApp.cr_corps_element.cr_corps" for="field_cr_corps">cr_corps</label>
+            <select class="form-control" id="field_cr_corps" name="cr_corps" ng-model="cr_corps_element.cr_corpsId" ng-options="cr_corps.id as cr_corps.co_nom_fr_fr for cr_corps in cr_corpss">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="craftApp.cr_corps_element.ce_quantite" for="field_ce_quantite">Ce_quantite</label>
+            <input type="text" class="form-control" name="ce_quantite" id="field_ce_quantite"
+                    ng-model="cr_corps_element.ce_quantite"/>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
+
+
+<!-- SAVE ECRAN DETAILS
 <div>
     <h2><span translate="craftApp.cr_corps_element.detail.title">Cr_corps_element</span> {{cr_corps_element.id}}</h2>
     <div class="table-responsive">
@@ -49,3 +94,4 @@
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
     </button>
 </div>
+ -->

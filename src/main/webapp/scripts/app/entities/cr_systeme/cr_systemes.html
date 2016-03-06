@@ -14,7 +14,7 @@ class="hidden-xs"                        translate="craftApp.cr_systeme.home.cre
             <div class="col-xs-8 no-padding-right">
                 <form name="searchForm" class="form-inline">
                     <div class="input-group pull-right" >
-                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'craftApp.cr_systeme.home.search' | translate }}">
+                        <input type="text" class="form-control" data-ng-model="system" data-typeahead="cr_systeme.sy_nom_fr_fr for cr_systeme in cr_systemes | filter:$viewValue" placeholder="{{ 'craftApp.cr_systeme.home.search' | translate }}">
                         <span  class="input-group-btn width-min" >
                             <button class="btn btn-info" ng-click="search()">
                                 <span class="glyphicon glyphicon-search"></span>
@@ -29,7 +29,7 @@ class="hidden-xs"                        translate="craftApp.cr_systeme.home.cre
     <div class="table-responsive">
  <!-- zone de saisie déclenchant l'autocomplétion -->
 <input type="text" data-ng-model="system" data-typeahead="cr_systeme.sy_nom_fr_fr for cr_systeme in cr_systemes | filter:$viewValue" />
-        <table class="jh-table table table-striped">
+       <!--  <table class="jh-table table table-striped">
             <thead>
                 <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
                     <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
@@ -65,7 +65,7 @@ class="hidden-xs"                        translate="craftApp.cr_systeme.home.cre
                     </td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
     </div>
     <div class="text-center">
         <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
